@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">  
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta name="title" content="MIDAS DESIGN Site"/>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="MIDAS DESIGN Site, a platform to share the value of JOBFLEX Design."
     />
+    <meta property="og:image" content="https://designmidas.cafe24.com/share/share_thumb_00_200x200.png"/>
+    <meta property="og:url" content="http://midasdesign.net/"/>
+    <meta property="og:description" content="MIDAS DESIGN Site, a platform to share the value of JOBFLEX Design."/>
+    <meta property="og:title" content="MIDAS DESIGN Site"/>
+    <meta name="theme-color" content="#000000" />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,20 +33,49 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>JOBFLEX DESIGN SYSTEM</title>
+    <style>
+      .loader-container {
+        width:100vw;
+        height:100vh;
+        background-color: #000;
+        animation: loaderFadeIn 2s linear;
+      }
+
+      .loader {
+        position: absolute;
+        border-radius: 50%;
+        left:calc(50vw - 36px);
+        top:calc(50vh - 36px);
+        width: 72px;
+        height: 72px;
+        animation: colorLoopLoader 1.5s ease-in-out infinite;
+      }
+      
+      @-webkit-keyframes colorLoopLoader {
+          0% { background-color: #ded1a5; transform: rotate(0deg); transform: scale(0.95); }
+          25% { background-color: #00b2ff;transform: scale(1); }
+          50% { background-color: #852bb1; transform: rotate(90deg); transform: scale(1.05);}
+          75% { background-color: #ded1a5; transform: rotate(0deg); transform: scale(1); }
+          100% { background-color: #00b2ff;transform: scale(0.95); }
+      }
+        
+      @keyframes colorLoopLoader {
+        0% { background-color: #ded1a5; transform: rotate(0deg); transform: scale(0.95); }
+          25% { background-color: #00b2ff;transform: scale(1); }
+          50% { background-color: #852bb1; transform: rotate(90deg); transform: scale(1.05);}
+          75% { background-color: #ded1a5; transform: rotate(0deg); transform: scale(1); }
+          100% { background-color: #00b2ff;transform: scale(0.95); }
+      }
+
+      </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="loader-container">
+      <div class="loader"></div>
+   </div>
   </body>
 </html>
